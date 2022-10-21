@@ -2,21 +2,18 @@ public class Main {
     public static void main(String[] args) {
         //Задача 1
         int monthNum = 2; //номер месяца
-        String monthName; //имя месяца
-        monthName = task1(monthNum);
+        String monthName = task1(monthNum); //имя месяца
         System.out.println("Задача 1: Название " + monthNum + " месяца - " + monthName);
 
         //Задача 2
         int mass[] = {5, 6, 1243, 9, 3, 453};
         int mValue = 1243; //искомое значение
-        int mIndex;
-        mIndex = task2(mass, mValue);
+        int mIndex= task2(mass, mValue);
         System.out.println("Задача 2: Индекс значения " + mValue + " в массиве - " + mIndex);
 
         //Задача 3
         String startWord = "HELLO";
-        String backWord; //слово наоборот
-        backWord = task3(startWord);
+        String backWord= task3(startWord); //слово наоборот
         System.out.println("Задача 3: Слово " + startWord + " перевернутое - " + backWord);
 
         //Задача 4
@@ -25,8 +22,7 @@ public class Main {
         System.out.println("Задача 4: Десятичная цифра " + decNumber + " в шестнадцетиричном - " + hexNumber);
 
         //Задача 5
-        int bubbledMass[];
-        bubbledMass = task5(mass);
+        int bubbledMass[]= task5(mass);
         System.out.print ("Задача 5: Отсортированный массив: ");
         //вывод массива
         for (int i = 0; i < bubbledMass.length; i++) {
@@ -167,12 +163,12 @@ public class Main {
     public static int[] task5 (int[] mass) {
         int bubbledMass[] = mass;
         int buf;
-        for (int i = 0; i < mass.length; i++) {
-            for (int j = 0; j < mass.length; j++) {
-                if (mass[i] < mass[j]) {
-                    buf = mass[i];
-                    mass[i]=mass[j];
-                    mass[j]=buf;
+        for (int i = 0; i < bubbledMass.length; i++) {
+            for (int j = 0; j < bubbledMass.length; j++) {
+                if (bubbledMass[i] < bubbledMass[j]) {
+                    buf = bubbledMass[i];
+                    bubbledMass[i]=bubbledMass[j];
+                    bubbledMass[j]=buf;
                 }
             }
         }
