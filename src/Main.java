@@ -8,12 +8,12 @@ public class Main {
         //Задача 2
         int mass[] = {5, 6, 1243, 9, 3, 453};
         int mValue = 1243; //искомое значение
-        int mIndex= task2(mass, mValue);
+        int mIndex = task2(mass, mValue);
         System.out.println("Задача 2: Индекс значения " + mValue + " в массиве - " + mIndex);
 
         //Задача 3
         String startWord = "HELLO";
-        String backWord= task3(startWord); //слово наоборот
+        String backWord = task3(startWord); //слово наоборот
         System.out.println("Задача 3: Слово " + startWord + " перевернутое - " + backWord);
 
         //Задача 4
@@ -22,8 +22,8 @@ public class Main {
         System.out.println("Задача 4: Десятичная цифра " + decNumber + " в шестнадцетиричном - " + hexNumber);
 
         //Задача 5
-        int bubbledMass[]= task5(mass);
-        System.out.print ("Задача 5: Отсортированный массив: ");
+        int bubbledMass[] = task5(mass);
+        System.out.print("Задача 5: Отсортированный массив: ");
         //вывод массива
         for (int i = 0; i < bubbledMass.length; i++) {
             System.out.print(bubbledMass[i] + ";");
@@ -160,15 +160,15 @@ public class Main {
     }
 
     //Задача 5
-    public static int[] task5 (int[] mass) {
+    public static int[] task5(int[] mass) {
         int bubbledMass[] = mass;
         int buf;
         for (int i = 0; i < bubbledMass.length; i++) {
             for (int j = 0; j < bubbledMass.length; j++) {
                 if (bubbledMass[i] < bubbledMass[j]) {
                     buf = bubbledMass[i];
-                    bubbledMass[i]=bubbledMass[j];
-                    bubbledMass[j]=buf;
+                    bubbledMass[i] = bubbledMass[j];
+                    bubbledMass[j] = buf;
                 }
             }
         }
